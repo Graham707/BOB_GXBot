@@ -17,8 +17,8 @@ async def start_message(bot, message):
              InlineKeyboardButton("ℹ️ Help", callback_data="help"),
              InlineKeyboardButton("😎 About", callback_data="about") 
              ],[
-             InlineKeyboardButton("🗳 Deploy", url="https://youtu.be/OTqZmADyOjU"),
-             InlineKeyboardButton("🤖 Support", url="https://t.me/Mo_Tech_YT")
+             InlineKeyboardButton("📺 Updates Channel", url="https://t.me/GX_Bots"),
+             InlineKeyboardButton("🤖 Support", url="https://t.me/GXBot_Support")
              ]]
         else:
             buttons = [[
@@ -27,8 +27,8 @@ async def start_message(bot, message):
              InlineKeyboardButton("ℹ️ Help", callback_data="bot_owner"),
              InlineKeyboardButton("😎 About", callback_data="about") 
              ],[
-             InlineKeyboardButton("🗳 Deploy", url="https://youtu.be/OTqZmADyOjU"),
-             InlineKeyboardButton("🤖 Support", url="https://t.me/Mo_Tech_Group")
+             InlineKeyboardButton("📺 Updates Channel", url="https://t.me/GX_Bots"),
+             InlineKeyboardButton("🤖 Support", url="https://t.me/GXBot_Support")
              ]]    
         await message.reply_photo(photo = choice(BOT_PICS), caption=START_MSG.format(mention = message.from_user.mention, bot_name = bot_info.BOT_NAME, bot_username = bot_info.BOT_USERNAME), reply_markup=InlineKeyboardMarkup(buttons))
         
@@ -61,7 +61,7 @@ async def help(bot, message):
 async def about(bot, message):
     button = [[
      InlineKeyboardButton("🏠 Home", callback_data="start"),
-     InlineKeyboardButton("Close 🗑️", callback_data="close")
+     InlineKeyboardButton("Close", callback_data="close")
      ]]  
     await message.reply_photo(
         photo = choice(BOT_PICS),
