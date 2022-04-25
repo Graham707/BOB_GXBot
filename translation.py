@@ -5,13 +5,13 @@ class LuciferMoringstar(object):
     HELP_MSG = """**Help Veno Monuse 🤣**"""
 
     ABOUT_MSG = """
-🤖 My Name [{bot_name}](t.me/{bot_username})
+🤖 My Name {bot_name}
 
-🧑 My Dev : [TheUltimateCat](t.me/)
+🧑 My Dev : TheUltimateCat
 
-🧑 My Creator : {dev_name}
+🧑 My Creator : TheUltimateCat
 
-🖇️ My Language : [Python3](https://youtu.be/Af055Eozk9s
+🖇️ My Language : [Python3]
 
 🏷️ My Updates : [GX Botz](t.me/GX_Botz)
 
