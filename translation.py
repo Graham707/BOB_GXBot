@@ -17,16 +17,6 @@ class LuciferMoringstar(object):
 
 🗣️ My Support : [GX Bot Support](t.me/GXBot_Support)"""
 
-
-
-
-
-
-
-
-
-
-
     FILE_CAPTIONS = """Hello 👋 {mention}\n\n📁Title <code>{title}</code>n\n🔘Size {size}"""
 
     PR0FESS0R_99 = """
@@ -49,8 +39,8 @@ class LuciferMoringstar(object):
 
 🎬 **Title** : [{title}]({url})
 📆 **Year** : {year}
+🎭 **Genres** {genres}
 🌟 **Rating** {rating}/10
-🗨️ **Genres** {genres}
     
 👤 **Requested By** : {mention}
     
