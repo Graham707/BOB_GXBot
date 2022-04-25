@@ -55,23 +55,20 @@ async def group_filters(client, message):
                 [InlineKeyboardButton(text="📃 Pages 1/1",callback_data="pages")]
 
             )
-            buttons.append(
-                [InlineKeyboardButton(text="🤖 CHECK MY PM 🤖", url=f"https://telegram.dog/{bot_info.BOT_USERNAME}")]
-            )
-
+            
             imdb=await get_poster(search)
             if imdb and imdb.get('poster'):
                 dell=await message.reply_photo(photo=imdb.get('poster'), caption=LuciferMoringstar.GET_MOVIE_1.format(mention=message.from_user.mention, query=search, title=imdb.get('title'), genres=imdb.get('genres'), year=imdb.get('year'), rating=imdb.get('rating'), url=imdb['url']), reply_markup=InlineKeyboardMarkup(buttons))
                 await asyncio.sleep(100000)
-                await dell.edit(f"⚙️ Filter For {search} Closed 🗑️")
+                await dell.edit(f"Files For {search} Closed Beacause of copyright issues")
             elif imdb:
                 dell=await message.reply_photo(photo=random.choice(BOT_PICS), caption=LuciferMoringstar.GET_MOVIE_1.format(mention=message.from_user.mention, query=search, title=imdb.get('title'), genres=imdb.get('genres'), year=imdb.get('year'), rating=imdb.get('rating'), url=imdb['url']), reply_markup=InlineKeyboardMarkup(buttons))
                 await asyncio.sleep(100000)
-                await dell.edit(f"⚙️ Filter For {search} Closed 🗑️")
+                await dell.edit(f"Files For {search} Closed Beacause of copyright issues")
             else:
                 dell=await message.reply_photo(photo=random.choice(BOT_PICS), caption=LuciferMoringstar.GET_MOVIE_2.format(query=search, mention=message.from_user.mention, chat=message.chat.title), reply_markup=InlineKeyboardMarkup(buttons))
                 await asyncio.sleep(100000)
-                await dell.edit(f"⚙️ Filter For {search} Closed 🗑️")
+                await dell.edit(f"Files For {search} Closed Beacause of copyright issues")
             return
 
         data = BUTTONS[keyword]
@@ -84,23 +81,20 @@ async def group_filters(client, message):
             [InlineKeyboardButton(text=f"📃 Pages 1/{data['total']}",callback_data="pages")]
 
         )
-        buttons.append(
-            [InlineKeyboardButton(text="🤖 CHECK MY PM 🤖", url=f"https://telegram.dog/{bot_info.BOT_USERNAME}")]
-        )
 
         imdb=await get_poster(search)
         if imdb and imdb.get('poster'):
             dell=await message.reply_photo(photo=imdb.get('poster'), caption=LuciferMoringstar.GET_MOVIE_1.format(mention=message.from_user.mention, query=search, title=imdb.get('title'), genres=imdb.get('genres'), year=imdb.get('year'), rating=imdb.get('rating'), url=imdb['url']), reply_markup=InlineKeyboardMarkup(buttons))
             await asyncio.sleep(100000)
-            await dell.edit(f"⚙️ Filter For {search} Closed 🗑️")         
+            await dell.edit(f"Files For {search} Closed Beacause of copyright issues")         
         elif imdb:
             dell=await message.reply_photo(photo=random.choice(BOT_PICS), caption=LuciferMoringstar.GET_MOVIE_1.format(mention=message.from_user.mention, query=search, title=imdb.get('title'), genres=imdb.get('genres'), year=imdb.get('year'), rating=imdb.get('rating'), url=imdb['url']), reply_markup=InlineKeyboardMarkup(buttons))
             await asyncio.sleep(100000)
-            await dell.edit(f"⚙️ Filter For {search} Closed 🗑️")
+            await dell.edit(f"Files For {search} Closed Beacause of copyright issues")
         else:
             dell=await message.reply_photo(photo=random.choice(BOT_PICS), caption=LuciferMoringstar.GET_MOVIE_2.format(query=search, mention=message.from_user.mention, chat=message.chat.title), reply_markup=InlineKeyboardMarkup(buttons))
             await asyncio.sleep(100000)
-            await dell.edit(f"⚙️ Filter For {search} Closed 🗑️")
+            await dell.edit(f"Files For {search} Closed Beacause of copyright issues")
 
 
 
@@ -150,20 +144,19 @@ async def pm_autofilter(client, message):
       
             )
 
-
             imdb=await get_poster(search)
             if imdb and imdb.get('poster'):
                 dell=await message.reply_photo(photo=imdb.get('poster'), caption=LuciferMoringstar.GET_MOVIE_1.format(mention=message.from_user.mention, query=search, title=imdb.get('title'), genres=imdb.get('genres'), year=imdb.get('year'), rating=imdb.get('rating'), url=imdb['url']), reply_markup=InlineKeyboardMarkup(buttons))
                 await asyncio.sleep(100000)
-                await dell.edit(f"⚙️ Filter For {search} Closed 🗑️")
+                await dell.edit(f"Files For {search} Closed Beacause of copyright issues")
             elif imdb:
                 dell=await message.reply_photo(photo=random.choice(BOT_PICS), caption=LuciferMoringstar.GET_MOVIE_1.format(mention=message.from_user.mention, query=search, title=imdb.get('title'), genres=imdb.get('genres'), year=imdb.get('year'), rating=imdb.get('rating'), url=imdb['url']), reply_markup=InlineKeyboardMarkup(buttons))
                 await asyncio.sleep(100000)
-                await dell.edit(f"⚙️ Filter For {search} Closed 🗑️")
+                await dell.edit(f"Files For {search} Closed Beacause of copyright issues")
             else:
                 dell=await message.reply_photo(photo=random.choice(BOT_PICS), caption=LuciferMoringstar.GET_MOVIE_2.format(query=search, mention=message.from_user.mention, chat=bot_info.BOT_NAME), reply_markup=InlineKeyboardMarkup(buttons))
                 await asyncio.sleep(100000)
-                await dell.edit(f"⚙️ Filter For {search} Closed 🗑️")
+                await dell.edit(f"Files For {search} Closed Beacause of copyright issues")
 
             return
 
@@ -182,12 +175,12 @@ async def pm_autofilter(client, message):
         if imdb and imdb.get('poster'):
             dell=await message.reply_photo(photo=imdb.get('poster'), caption=LuciferMoringstar.GET_MOVIE_1.format(mention=message.from_user.mention, query=search, title=imdb.get('title'), genres=imdb.get('genres'), year=imdb.get('year'), rating=imdb.get('rating'), url=imdb['url']), reply_markup=InlineKeyboardMarkup(buttons))
             await asyncio.sleep(100000)
-            await dell.edit(f"⚙️ Filter For {search} Closed 🗑️")         
+            await dell.edit(f"Files For {search} Closed Beacause of copyright issues")         
         elif imdb:
             dell=await message.reply_photo(photo=random.choice(BOT_PICS), caption=LuciferMoringstar.GET_MOVIE_1.format(mention=message.from_user.mention, query=search, title=imdb.get('title'), genres=imdb.get('genres'), year=imdb.get('year'), rating=imdb.get('rating'), url=imdb['url']), reply_markup=InlineKeyboardMarkup(buttons))
             await asyncio.sleep(100000)
-            await dell.edit(f"⚙️ Filter For {search} Closed 🗑️")
+            await dell.edit(f"Files For {search} Closed Beacause of copyright issues")
         else:
             dell=await message.reply_photo(photo=random.choice(BOT_PICS), caption=LuciferMoringstar.GET_MOVIE_2.format(query=search, mention=message.from_user.mention, chat=bot_info.BOT_NAME), reply_markup=InlineKeyboardMarkup(buttons))
             await asyncio.sleep(100000)
-            await dell.edit(f"⚙️ Filter For {search} Closed 🗑️")
+            await dell.edit(f"Files For {search} Closed Beacause of copyright issues")
